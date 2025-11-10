@@ -1,0 +1,20 @@
+object MergeCollections {
+
+  def main(args: Array[String]): Unit = {
+    val a = List(1, 2)
+    val b = List(3, 4)
+    val v = Vector(5, 6)
+
+    val c1 = a ++ b
+    val c2 = a ::: b
+
+    println(c1)
+    println(c2)
+
+    val combined = a ::: b ++ v
+    println(combined)
+
+    // ::: ---> Concatenates two lists only, efficiently reusing the first list’s nodes.
+    // ++ ---> Concatenates any collections (lists, vectors, sets, etc.) and returns a new collection.
+  }
+}
