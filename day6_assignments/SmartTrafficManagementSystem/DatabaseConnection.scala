@@ -9,7 +9,6 @@ object DatabaseConnection {
   private val properties = new Properties()
 
   try {
-
     properties.load(new FileInputStream("config/db.properties"))
   } catch {
     case e: Exception =>
