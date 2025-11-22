@@ -8,8 +8,6 @@ A Scala/Play Framework backend for managing events, users, teams, and tasks, wit
 - Background scheduling & Kafka-based event processing
 - Email notifications via pluggable email modes (console or SMTP)
 
----
-
 ## Features
 
 - **Authentication & Authorization**
@@ -50,8 +48,6 @@ A Scala/Play Framework backend for managing events, users, teams, and tasks, wit
     - `console` – print emails to console (good for development)
     - `smtp` – send real emails via SMTP server (host/user/pass configurable)
 
----
-
 ## Tech Stack
 
 - **Language:** Scala
@@ -62,7 +58,6 @@ A Scala/Play Framework backend for managing events, users, teams, and tasks, wit
 - **Auth:** JWT (using `com.auth0.jwt`)
 - **Email:** Jakarta Mail (`jakarta.mail`) via custom `EmailService`
 
----
 
 ## Project Structure (High-Level)
 
