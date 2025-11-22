@@ -7,8 +7,6 @@ A single project made of two Scala services:
 
 Together they manage shared corporate equipment (laptops, projectors, tablets) with real‑time status, overdue reminders, and automated emails.
 
----
-
 ## Problem
 
 - Companies share devices (laptops, projectors, tablets) across teams.
@@ -18,8 +16,6 @@ Together they manage shared corporate equipment (laptops, projectors, tablets) w
   - **Overdue returns** are easy to miss.
   - **Damaged** items may not reach maintenance quickly.
   - Inventory and maintenance teams don’t get consistent updates.
-
----
 
 ## Solution Overview
 
@@ -33,9 +29,7 @@ Together they manage shared corporate equipment (laptops, projectors, tablets) w
   - Sends email notifications to employees, inventory, and maintenance.
 - Communication between services is **event-driven** using Kafka topic `equipment-events`.
 
----
-
-## Code Structure (combined project view)
+## Code Structure
 
 ### models (Play API)
 
@@ -111,7 +105,7 @@ Together they manage shared corporate equipment (laptops, projectors, tablets) w
 ### security (Play API)
 
 - `Roles`
-  - Constants for `admin`, `reception`, `inventory`, `maintenance` roles.
+  - Constants for `admin`, `reception`, `inventory`, `maintenance` ,`user` roles.
 - `JWTUtils`
   - Creates JWT tokens with username and role.
   - Validates tokens and extracts claims.
@@ -130,8 +124,6 @@ Together they manage shared corporate equipment (laptops, projectors, tablets) w
   - Registers CORS and auth filters with Play.
 - `Module`
   - Guice wiring for repositories, services, filters, and `OverdueScheduler`.
-
----
 
 ### actors (Akka service)
 
@@ -175,8 +167,6 @@ Together they manage shared corporate equipment (laptops, projectors, tablets) w
     - `notificationActor`
     - `kafkaConsumerActor` wired with the above actors.
   - Starts polling Kafka as soon as the service starts.
-
----
 
 ## End-to-End Flow (summary)
 
