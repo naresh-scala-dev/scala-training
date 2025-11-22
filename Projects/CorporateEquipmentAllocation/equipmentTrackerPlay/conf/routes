@@ -1,0 +1,25 @@
+# Assets
+GET           /assets/*file                                   controllers.Assets.versioned(path="/public", file: Asset)
+GET           /favicon.png                                    controllers.Assets.at(path="/public", file="favicon.png")
+GET           /                                               controllers.HomeController.index
+
+# Authentication
+POST          /api/login                                      controllers.AuthController.login
+
+# Equipment CRUD
+POST          /api/equipment/create                           controllers.EquipmentController.createEquipment
+PUT           /api/equipment/update                           controllers.EquipmentController.updateEquipment
+GET           /api/equipment/list                             controllers.EquipmentController.listEquipment
+PUT           /api/equipment/mark-damaged/:equipmentId        controllers.EquipmentController.markDamagedEquipment(equipmentId: Long)
+
+# Equipment allocation
+POST          /api/equipment/allocate                         controllers.EquipmentController.allocateEquipment
+POST          /api/equipment/return                           controllers.EquipmentController.returnEquipment
+GET           /api/equipment/status/:userId                   controllers.EquipmentController.allocationStatus(userId: Long)
+
+# User management
+GET           /api/users                                      controllers.UserController.getAllUsers
+GET           /api/users/:id                                  controllers.UserController.getUser(id: Long)
+POST          /api/users/createUser                           controllers.UserController.createUser
+PUT           /api/users/:id                                  controllers.UserController.updateUser(id: Long)
+DELETE        /api/users/:id                                  controllers.UserController.deleteUser(id: Long)
