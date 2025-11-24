@@ -55,7 +55,7 @@ class EquipmentController @Inject()(
     }
   }
 
-  def createEquipment = authAction.withRoles(Set(Roles.Admin)).async(parse.json) { request =>
+  def createEquipment: Action[JsValue] = authAction.withRoles(Set(Roles.Admin)).async(parse.json) { request =>
     request.body.validate[EquipmentRequestDTO].fold(
       _ => Future.successful(Ok(Json.toJson(ApiResponse("fail", "Invalid equipment data", Some(Json.obj()))))),
       data => {
@@ -64,7 +64,7 @@ class EquipmentController @Inject()(
           case Some(_) =>
             Future.successful(Ok(Json.toJson(ApiResponse("fail", "Equipment already exists", Some(Json.obj())))))
           case None =>
-            val newEquipment = Equipment(0, data.name, data.`type`, data.status)
+            val newEquipment = Equipment(0, data.name, data.`type`, "available")
             val insert = (equipments returning equipments.map(_.id)) += newEquipment
             db.run(insert).map { id =>
               val eqDTO = EquipmentDTO.fromEquipment(newEquipment.copy(id = id))
@@ -212,7 +212,7 @@ class EquipmentController @Inject()(
     }
   }
 
-  def markDamagedEquipment(equipmentId: Long) = authAction.withRoles(Set(Roles.Admin, Roles.MaintenanceStaff)).async { _ =>
+  def markDamagedEquipment(equipmentId: Long): Action[AnyContent] = authAction.withRoles(Set(Roles.Admin, Roles.MaintenanceStaff)).async { _ =>
     val maintenanceQuery = users.filter(_.role === "maintenance").result.headOption
     val inventoryQuery = users.filter(_.role === "inventory").result.headOption
     val equipmentQuery = equipments.filter(_.id === equipmentId).result.headOption
@@ -234,6 +234,37 @@ class EquipmentController @Inject()(
         )
       case (_, _, None, _) => Ok(Json.toJson(ApiResponse("fail", "Equipment not found", Some(Json.obj()))))
       case _ => Ok(Json.toJson(ApiResponse("fail", "Maintenance or Inventory user missing", Some(Json.obj()))))
+    }
+  }
+
+  def markRepairedEquipment(equipmentId: Long): Action[AnyContent] = authAction.withRoles(Set(Roles.Admin, Roles.MaintenanceStaff)).async { _ =>
+    val receptionQuery = users.filter(_.role === "reception").result.headOption
+    val inventoryQuery = users.filter(_.role === "inventory").result.headOption
+    val equipmentQuery = equipments.filter(_.id === equipmentId).result.headOption
+
+    val action = for {
+      rOpt <- receptionQuery
+      iOpt <- inventoryQuery
+      eqOpt <- equipmentQuery
+      updated <- eqOpt match {
+        case Some(_) => equipments.filter(_.id === equipmentId).map(_.status).update("available")
+        case None => DBIO.successful(0)
+      }
+    } yield (rOpt, iOpt, eqOpt, updated)
+
+    db.run(action.transactionally).map {
+      case (Some(r), Some(i), Some(eq), updated) if updated > 0 =>
+        // Notify reception & inventory that equipment is repaired and available again
+        kafkaProducer.sendEvent("repaired", equipmentId, r.email, i.email)
+        Ok(Json.toJson(ApiResponse(
+          "success",
+          "Equipment marked as repaired and available",
+          Some(Json.obj("equipment" -> Json.toJson(EquipmentDTO.fromEquipment(eq))))
+        )))
+      case (_, _, None, _) =>
+        Ok(Json.toJson(ApiResponse("fail", "Equipment not found", Some(Json.obj()))))
+      case _ =>
+        Ok(Json.toJson(ApiResponse("fail", "Reception or Inventory user missing", Some(Json.obj()))))
     }
   }
 }

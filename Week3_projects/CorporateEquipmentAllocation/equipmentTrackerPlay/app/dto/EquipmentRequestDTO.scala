@@ -4,8 +4,7 @@ import play.api.libs.json.Json
 
 case class EquipmentRequestDTO(
                                 name: String,
-                                `type`: String,
-                                status: String
+                                `type`: String
                               )
 
 object EquipmentRequestDTO {

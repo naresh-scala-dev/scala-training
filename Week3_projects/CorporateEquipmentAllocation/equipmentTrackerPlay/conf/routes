@@ -11,6 +11,7 @@ POST          /api/equipment/create                           controllers.Equipm
 PUT           /api/equipment/update                           controllers.EquipmentController.updateEquipment
 GET           /api/equipment/list                             controllers.EquipmentController.listEquipment
 PUT           /api/equipment/mark-damaged/:equipmentId        controllers.EquipmentController.markDamagedEquipment(equipmentId: Long)
+PUT           /api/equipment/mark-repaired/:equipmentId       controllers.EquipmentController.markRepairedEquipment(equipmentId: Long)
 
 # Equipment allocation
 POST          /api/equipment/allocate                         controllers.EquipmentController.allocateEquipment
