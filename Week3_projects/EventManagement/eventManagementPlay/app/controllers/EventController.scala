@@ -5,8 +5,10 @@ import models.{Event, EventTable}
 import play.api.db.slick.{DatabaseConfigProvider, HasDatabaseConfigProvider}
 import play.api.libs.json._
 import play.api.mvc._
+import repositories.EventUserRepository
 import security.{AuthAction, Roles}
 import slick.jdbc.JdbcProfile
+
 import javax.inject._
 import scala.concurrent.{ExecutionContext, Future}
 import utils.JsonTimestamp._
@@ -15,7 +17,8 @@ import utils.JsonTimestamp._
 class EventController @Inject()(
                                  val controllerComponents: ControllerComponents,
                                  val dbConfigProvider: DatabaseConfigProvider,
-                                 authAction: AuthAction
+                                 authAction: AuthAction,
+                                 eventUserRepository: EventUserRepository
                                )(implicit ec: ExecutionContext)
   extends BaseController
     with HasDatabaseConfigProvider[JdbcProfile] {
@@ -45,19 +48,25 @@ class EventController @Inject()(
     request.body.validate[EventCreateDTO].fold(
       _ => Future.successful(Ok(Json.toJson(ApiResponse("fail", "Invalid event data")))),
       dto => {
-        val duplicateCheck = events.filter(e => e.name === dto.name && e.date === dto.date).result.headOption
-        db.run(duplicateCheck).flatMap {
-          case Some(_) =>
-            Future.successful(Ok(Json.toJson(ApiResponse("fail", "Event with same name and date already exists"))))
-          case None =>
-            val now = new java.sql.Timestamp(System.currentTimeMillis())
-            val newEvent = Event(0L, dto.name, dto.eventType, dto.date, dto.guestCount, request.id, Some(now), Some(now))
-            val insertQuery = (events returning events.map(_.id) into ((e, id) => e.copy(id = id))) += newEvent
-            db.run(insertQuery).map { created =>
-              Ok(Json.toJson(ApiResponse("success", "Event created successfully", Some(Json.toJson(created)))))
-            }.recover {
-              case ex => Ok(Json.toJson(ApiResponse("fail", s"Error creating event: ${ex.getMessage}")))
+        // Look up the authenticated user so we can store a valid foreign key in created_by
+        eventUserRepository.findByUsername(request.username).flatMap {
+          case Some(user) =>
+            val duplicateCheck = events.filter(e => e.name === dto.name && e.date === dto.date).result.headOption
+            db.run(duplicateCheck).flatMap {
+              case Some(_) =>
+                Future.successful(Ok(Json.toJson(ApiResponse("fail", "Event with same name and date already exists"))))
+              case None =>
+                val now = new java.sql.Timestamp(System.currentTimeMillis())
+                val newEvent = Event(0L, dto.name, dto.eventType, dto.date, dto.guestCount, user.id, Some(now), Some(now))
+                val insertQuery = (events returning events.map(_.id) into ((e, id) => e.copy(id = id))) += newEvent
+                db.run(insertQuery).map { created =>
+                  Ok(Json.toJson(ApiResponse("success", "Event created successfully", Some(Json.toJson(created)))))
+                }.recover {
+                  case ex => Ok(Json.toJson(ApiResponse("fail", s"Error creating event: ${ex.getMessage}")))
+                }
             }
+          case None =>
+            Future.successful(Ok(Json.toJson(ApiResponse("fail", "Authenticated user not found"))))
         }
       }
     )

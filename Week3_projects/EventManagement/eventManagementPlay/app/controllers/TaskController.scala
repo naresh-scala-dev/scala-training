@@ -42,6 +42,7 @@ class TaskController @Inject()(
   implicit val taskFormat: OFormat[Task] = Json.format[Task]
 
   /** Create Task + send notification */
+  /** Create Task + send notification */
   def createTask: Action[JsValue] = authAction.withRoles(Set(Roles.EventManager)).async(parse.json) { request =>
     request.body.validate[TaskCreateDTO].fold(
       errors => Future.successful(Ok(Json.toJson(ApiResponse("fail", "Invalid task data")))),
@@ -60,8 +61,18 @@ class TaskController @Inject()(
 
           case None =>
             val newTask = Task(
-              0, dto.eventId, dto.teamId, dto.description, dto.status,
-              dto.startTime, dto.endTime, dto.specialRequest, Some(now), Some(now)
+              id = 0,
+              eventId = dto.eventId,
+              teamId = dto.teamId,
+              description = dto.description,
+              status = dto.status,
+              startTime = dto.startTime,
+              endTime = dto.endTime,
+              specialRequest = dto.specialRequest,
+              reminderSent = false,
+              eventDayAlertSent = false,
+              createdAt = Some(now),
+              updatedAt = Some(now)
             )
 
             val insertQuery = (tasks returning tasks.map(_.id) into ((t, id) => t.copy(id = id))) += newTask
@@ -82,7 +93,7 @@ class TaskController @Inject()(
                         "scheduledTime" -> createdTask.startTime.toString,
                         "specialRequest" -> Json.toJson(createdTask.specialRequest.getOrElse(""))
                       )
-                      println("jhsdbvjsdk---"+payload.toString())
+                      println("TASK_ASSIGNMENT payload: " + payload.toString())
                       kafkaProducer.sendEvent("TASK_ASSIGNMENT", payload.toString())
                     }
                   }.map(_ => Ok(Json.toJson(ApiResponse("success", "Task created successfully", Some(Json.toJson(createdTask))))))

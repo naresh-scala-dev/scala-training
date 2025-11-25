@@ -42,7 +42,7 @@ class TeamUserRepository @Inject()(
     val query = for {
       tu <- teamUsers if tu.teamId === teamId
       u  <- eventUsers if u.id === tu.userId
-    } yield u.email // Or u.email if you have an email column
+    } yield u.email
     db.run(query.result)
   }
 }

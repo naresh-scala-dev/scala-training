@@ -150,7 +150,7 @@ class TeamController @Inject()(
 
 
   /** Remove User from Team */
-  def removeUserFromTeam: Action[JsValue] = authAction.withRoles(Set(Roles.EventManager)).async(parse.json) { request =>
+  def removeUserFromTeam(): Action[JsValue] = authAction.withRoles(Set(Roles.EventManager)).async(parse.json) { request =>
     implicit val assignFormat = Json.format[TeamAssignUserDTO]
 
     request.body.validate[TeamAssignUserDTO].fold(
