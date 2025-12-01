@@ -16,7 +16,7 @@ class FileController @Inject()(cc: ControllerComponents, uploadedFileRepo: Uploa
   val uploadDir = new File("uploads")
   if (!uploadDir.exists()) uploadDir.mkdirs()
 
-  // POST /upload
+  // POST /upload - Single file upload
   def upload = Action(parse.multipartFormData).async { request =>
     request.body.file("file").map { filePart =>
       val filename = Paths.get(filePart.filename).getFileName.toString
@@ -36,7 +36,32 @@ class FileController @Inject()(cc: ControllerComponents, uploadedFileRepo: Uploa
     }
   }
 
-  // GET /files
+  // POST /uploadMultiple - Multiple file upload
+  def uploadMultiple = Action(parse.multipartFormData).async { request =>
+    val files = request.body.files
+    if (files.isEmpty) {
+      Future.successful(BadRequest(Json.obj("status" -> "fail", "message" -> "No files uploaded")))
+    } else {
+      val uploadedFutures: Seq[Future[UploadedFile]] = files.map { filePart =>
+        val filename = Paths.get(filePart.filename).getFileName.toString
+        val uniqueFilename = java.util.UUID.randomUUID().toString + "_" + filename
+        val filePath = new File(uploadDir, uniqueFilename)
+        filePart.ref.moveTo(filePath, replace = true)
+
+        val uploadedFile = UploadedFile(filename = filename, path = filePath.getAbsolutePath)
+        uploadedFileRepo.insert(uploadedFile)
+      }
+
+      Future.sequence(uploadedFutures).map { savedFiles =>
+        Ok(Json.obj(
+          "status" -> "success",
+          "files" -> Json.toJson(savedFiles)
+        ))
+      }
+    }
+  }
+
+  // GET /files - List all uploaded files
   def listFiles = Action.async {
     uploadedFileRepo.listAll().map { files =>
       Ok(Json.toJson(files))
