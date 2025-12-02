@@ -55,7 +55,6 @@ object MiniCaseStudy {
         log.info("PARQUET WRITE DONE.")
       }
 
-      log.info("Observation: Joins + groupBy = heavy shuffle; Parquet is efficient for analytics.")
     }
 
     log.info("COMPLETED MiniCaseStudy")

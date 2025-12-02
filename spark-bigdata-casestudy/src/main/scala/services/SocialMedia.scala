@@ -37,7 +37,6 @@ object SocialMedia {
 
       Timer.time { postsPerAge.write.mode("overwrite").json("output/ex6/posts_per_age_json"); Thread.sleep(30000); log.info("JSON WRITE DONE.") }
 
-      log.info("Observation: Join triggers shuffle; DataFrame join is optimized by Catalyst.")
     }
 
     log.info("COMPLETED SocialMedia")

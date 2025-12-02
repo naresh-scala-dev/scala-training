@@ -32,7 +32,6 @@ object ProductCatalog {
       Timer.time { sorted.write.mode("overwrite").csv("output/ex4/products_sorted_csv"); Thread.sleep(30000); log.info("CSV WRITE DONE.") }
       Timer.time { sorted.write.mode("overwrite").parquet("output/ex4/products_sorted_parquet"); Thread.sleep(30000); log.info("PARQUET WRITE DONE.") }
 
-      log.info("Observation: Sorting causes shuffle; Parquet write faster on reads and smaller on disk.")
     }
 
     log.info("COMPLETED ProductCatalog")
