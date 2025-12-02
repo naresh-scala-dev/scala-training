@@ -71,7 +71,7 @@ object Pipeline9_DistanceBuckets {
       .mode(SaveMode.Append)
       .save()
 
-    println("✔ Data inserted to MySQL successfully")
+    println("Data inserted to MySQL successfully")
 
     spark.stop()
   }

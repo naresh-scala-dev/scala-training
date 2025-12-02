@@ -17,29 +17,36 @@ object Pipeline7_HighFareTrips {
       .getOrCreate()
 
     val sc = spark.sparkContext
+    import spark.implicits._
 
-    // Delete old output dir
+
     val outputDir = Paths.get(outputPath)
     if (Files.exists(outputDir)) {
       FileUtils.deleteDirectory(outputDir.toFile)
       println(s"Deleted existing output folder: $outputPath")
     }
 
-    // Load data
+
     val rdd = sc.textFile(inputPath)
+    val header = rdd.first()
 
-    val header = rdd.first()         // get header row
-
-    val result = rdd
-      .filter(line => line != header)    // skip header
+    val filtered = rdd
+      .filter(_ != header)
       .map(_.split(",", -1))
       .filter(cols => cols.length >= 9)
-      .filter(cols =>
-        scala.util.Try(cols(8).toDouble).getOrElse(0.0) > 100     // safe parse
-      )
-      .map(_.mkString(","))
+      .filter(cols => scala.util.Try(cols(8).toDouble).getOrElse(0.0) > 100)
 
-    result.saveAsTextFile(outputPath)
+
+    val df = filtered.map(cols =>
+      (cols(0), cols(1), cols(2), cols(3), cols(4), cols(5), cols(6), cols(7), cols(8))
+    ).toDF("tripId", "city", "vehicleType", "startTime", "endTime",
+      "startLat", "startLong", "endLat", "fareAmount")
+
+
+    df.write.mode("overwrite").parquet("output/pipeline7_parquet")
+
+
+    df.rdd.map(_.mkString(",")).saveAsTextFile(outputPath)
 
     spark.stop()
   }
