@@ -111,7 +111,8 @@ INSERT INTO new_orders (customer_id, amount) VALUES
 - Reads order 4
 - Sends 1 Avro message to Kafka
 - Updates offset to 4
-![img_2.png](img_2.png)
+
+![Screenshot 2025-12-07 at 12.55.41 PM.png](Screenshot%202025-12-07%20at%2012.55.41%E2%80%AFPM.png)
 
 ### Kafka Message Format
 

@@ -145,13 +145,12 @@ s3://dataengtrain8790/
 ### Sample JSON Output File
 
 ```json
-{"order_id":0,"customer_id":1,"amount":5.7928E-319,"created_at":"","kafka_timestamp":"2025-12-04T13:03:36.354+05:30","processing_time":"2025-12-04T13:06:03.196+05:30"}
-{"order_id":0,"customer_id":2,"amount":5.8181E-319,"created_at":"","kafka_timestamp":"2025-12-04T13:03:36.360+05:30","processing_time":"2025-12-04T13:06:03.196+05:30"}
-{"order_id":0,"customer_id":3,"amount":5.8434E-319,"created_at":"","kafka_timestamp":"2025-12-04T13:03:36.361+05:30","processing_time":"2025-12-04T13:06:03.196+05:30"}
-{"order_id":0,"customer_id":4,"amount":5.7928E-319,"created_at":"","kafka_timestamp":"2025-12-04T13:03:36.361+05:30","processing_time":"2025-12-04T13:06:03.196+05:30"}
-{"order_id":0,"customer_id":5,"amount":5.8687E-319,"created_at":"","kafka_timestamp":"2025-12-04T13:03:36.361+05:30","processing_time":"2025-12-04T13:06:03.196+05:30"}
+{"order_id":1,"customer_id":101,"amount":250.75,"created_at":"2025-12-03 21:16:27","kafka_timestamp":"2025-12-07T12:52:25.087+05:30","processing_time":"2025-12-07T12:54:04.607+05:30"}
+{"order_id":2,"customer_id":102,"amount":120.5,"created_at":"2025-12-03 21:16:27","kafka_timestamp":"2025-12-07T12:52:25.093+05:30","processing_time":"2025-12-07T12:54:04.607+05:30"}
+{"order_id":3,"customer_id":103,"amount":575.0,"created_at":"2025-12-04 09:18:38","kafka_timestamp":"2025-12-07T12:52:25.093+05:30","processing_time":"2025-12-07T12:54:04.607+05:30"}
+{"order_id":4,"customer_id":101,"amount":75.25,"created_at":"2025-12-03 21:16:27","kafka_timestamp":"2025-12-07T12:52:25.093+05:30","processing_time":"2025-12-07T12:54:04.607+05:30"}
 ```
-![img_2.png](img_2.png)
+![Screenshot 2025-12-07 at 12.55.41 PM.png](../pipeline4/Screenshot%202025-12-07%20at%2012.55.41%E2%80%AFPM.png)![img_2.png](img_2.png)
 ### End-to-End Flow
 
 **Pipeline 4 Output (Kafka):**
