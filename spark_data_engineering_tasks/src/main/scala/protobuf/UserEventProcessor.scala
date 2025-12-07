@@ -75,7 +75,6 @@ object UserEventProcessor {
 
       logger.info(s"Message $i: userId=$userId, action=$action, value=${"%.2f".format(value)}, bytes=${serializedEvent.length}")
     }
-
     producer.flush()
     producer.close()
     logger.info("\n All 20 messages produced and sent to Kafka\n")
