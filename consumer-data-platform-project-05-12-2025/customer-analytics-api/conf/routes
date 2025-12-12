@@ -1,0 +1,23 @@
+GET     /                                       controllers.HomeController.index()
+
+# Health and Monitoring
+GET     /health                                 controllers.HealthController.health()
+GET     /cache/stats                            controllers.HealthController.cacheStats()
+
+# Customer Profile API
+GET     /customer/:id                           controllers.CustomerController.getCustomer(id: Int)
+
+# Summary API - keep all first to avoid route conflicts
+GET     /summary/all/:date                      controllers.SummaryController.getAllSummaries(date: String)
+GET     /summary/:date/:customerId              controllers.SummaryController.getSummary(date: String, customerId: Int)
+
+# Events API - keep all first to avoid route conflicts
+GET     /events/all/:date                       controllers.EventsController.getAllEventsByDate(date: String)
+GET     /events/:customerId/:date               controllers.EventsController.getEventsByDate(customerId: Int, date: String)
+GET     /events/:customerId                     controllers.EventsController.getRecentEvents(customerId: Int, limit: Option[Int])
+
+# Static Assets
+GET     /assets/*file                           controllers.Assets.versioned(path="/public", file: Asset)
+
+# Authentication Routes
+POST    /auth/login                             controllers.AuthController.login

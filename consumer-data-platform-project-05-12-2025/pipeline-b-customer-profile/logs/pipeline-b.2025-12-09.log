@@ -1,0 +1,660 @@
+2025-12-09 11:09:57.507 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:09:57.508 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:13:10.345 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:13:10.346 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:16:59.383 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:16:59.384 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:18:48.893 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:18:48.894 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:18:54.338 [sbt-bg-threads-1] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-12-09 11:18:54.627 [sbt-bg-threads-1] INFO  org.sparkproject.jetty.util.log - Logging initialized @18464ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-12-09 11:18:54.673 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - jetty-9.4.52.v20230823; built: 2023-08-23T19:29:37.669Z; git: abdcda73818a1a2c705da276edb0bf6581e7997e; jvm 11.0.29+0
+2025-12-09 11:18:54.686 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - Started @18524ms
+2025-12-09 11:18:54.700 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Started ServerConnector@123d5791{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 11:18:54.712 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@9092848{/,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.859 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@9092848{/,null,STOPPED,@Spark}
+2025-12-09 11:18:54.860 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@44e34af9{/jobs,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.860 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6d096151{/jobs/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.861 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@58204456{/jobs/job,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.861 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@57eead80{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.861 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5e690ca6{/stages,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.862 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3ee040f5{/stages/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.862 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@471e6108{/stages/stage,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.863 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@23e5b8e7{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.863 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3db16a9f{/stages/pool,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.864 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3efd9d36{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.864 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1bca73af{/storage,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.865 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@702ea7ba{/storage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.865 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5d457fb8{/storage/rdd,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.866 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3e0ad2a8{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.866 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@cd78383{/environment,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.866 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3aea0067{/environment/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.866 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3c60b2d5{/executors,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.867 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6c7ca630{/executors/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.867 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6614248{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.868 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@729a03be{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.868 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@34ca27fa{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.868 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1e07dd86{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.872 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@693d9499{/static,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.873 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3dda482c{/,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.874 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6f7acacd{/api,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.874 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@72a1aa6c{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.875 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5edf8a6b{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.877 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6b0155bd{/metrics/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.919 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Spark Session created successfully
+2025-12-09 11:18:54.919 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 1: Extracting transactions from MySQL
+2025-12-09 11:18:54.919 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Reading previous day's transactions from MySQL
+2025-12-09 11:18:54.970 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5d29feab{/SQL,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.970 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@61c3003e{/SQL/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.971 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@84137a{/SQL/execution,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.971 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7f61bc31{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-12-09 11:18:54.975 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@46bcd346{/static/sql,null,AVAILABLE,@Spark}
+2025-12-09 11:18:59.159 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - MySQL read completed successfully
+2025-12-09 11:19:05.921 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Extracted rows: 0
+2025-12-09 11:19:05.921 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 2: Transforming transactions to daily summary
+2025-12-09 11:19:05.921 [sbt-bg-threads-1] INFO  transformer.TransactionSummarizer - Applying transformations & aggregations
+2025-12-09 11:19:12.047 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Aggregated rows: 0
+2025-12-09 11:19:12.047 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 3: Writing daily summary to Parquet
+2025-12-09 11:19:12.048 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Writing Parquet to s3a://dataengtrain8790/pipelineb/txn_summary
+2025-12-09 11:19:12.112 [sbt-bg-threads-1] WARN  o.a.h.metrics2.impl.MetricsConfig - Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+2025-12-09 11:19:31.056 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Parquet write completed successfully
+2025-12-09 11:19:31.057 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B COMPLETED SUCCESSFULLY ===== ✅
+2025-12-09 11:19:31.068 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Stopped Spark@123d5791{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 11:19:31.382 [Thread-2] ERROR o.apache.hadoop.conf.Configuration - error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /Users/racit/Documents/sparkProject/pipeline-b-customer-profile/target/bg-jobs/sbt_dca6b3e1/target/53fdf465/2328f86a/hadoop-common-3.3.1.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+	at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+	at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2986)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3082)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3040)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3013)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2893)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2875)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1225)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1842)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1819)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+	at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)
+2025-12-09 11:32:41.505 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:32:41.506 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:32:46.947 [sbt-bg-threads-1] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-12-09 11:32:47.223 [sbt-bg-threads-1] INFO  org.sparkproject.jetty.util.log - Logging initialized @18866ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-12-09 11:32:47.265 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - jetty-9.4.52.v20230823; built: 2023-08-23T19:29:37.669Z; git: abdcda73818a1a2c705da276edb0bf6581e7997e; jvm 11.0.29+0
+2025-12-09 11:32:47.277 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - Started @18920ms
+2025-12-09 11:32:47.290 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Started ServerConnector@40c03fe{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 11:32:47.301 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@62878422{/,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.447 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@62878422{/,null,STOPPED,@Spark}
+2025-12-09 11:32:47.448 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@12b68dc3{/jobs,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.448 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@62024489{/jobs/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.448 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@569ddaf1{/jobs/job,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.449 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@208231d{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.449 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@43edc6ad{/stages,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.449 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@38410915{/stages/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.450 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4b708b0c{/stages/stage,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.450 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@360ca57d{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.451 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6f09f93e{/stages/pool,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.451 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1df5e1f8{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.451 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6cdc243c{/storage,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.451 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1c4724e5{/storage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.452 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3a8494e3{/storage/rdd,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.452 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4e48b8c4{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.453 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@424cad1a{/environment,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.453 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4c0bc50b{/environment/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.453 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3fe2695b{/executors,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.454 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1c31e9bc{/executors/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.454 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@21dcb9e8{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.455 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3e887ca6{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.455 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3242b374{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.455 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5ac566f7{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.459 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@214f7056{/static,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.459 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2ea58404{/,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.460 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2ca814fc{/api,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.460 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4131505{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.461 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@d8db97b{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.463 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7bd226b1{/metrics/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.511 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Spark Session created successfully
+2025-12-09 11:32:47.511 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 1: Extracting transactions from MySQL
+2025-12-09 11:32:47.559 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@30c8528{/SQL,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.559 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4edfdf79{/SQL/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.560 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1e9168b2{/SQL/execution,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.560 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@21e0fa8{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-12-09 11:32:47.564 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1bf0ec8{/static/sql,null,AVAILABLE,@Spark}
+2025-12-09 11:32:55.386 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Reading transactions from MySQL with query: (
+SELECT t.customer_id,
+       t.product_id,
+       t.qty,
+       t.amount,
+       t.txn_timestamp,
+       p.category
+FROM transactions t
+JOIN products p ON t.product_id = p.product_id
+WHERE DATE(t.txn_timestamp) = '2024-12-31'
+) tx
+
+2025-12-09 11:33:04.460 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Extracted rows: 87
+2025-12-09 11:33:10.459 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Extracted rows: 87
+2025-12-09 11:33:10.460 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 2: Transforming transactions to daily summary
+2025-12-09 11:33:10.460 [sbt-bg-threads-1] INFO  transformer.TransactionSummarizer - Applying transformations & aggregations
+2025-12-09 11:33:17.043 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Aggregated rows: 86
+2025-12-09 11:33:17.046 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 3: Writing daily summary to Parquet
+2025-12-09 11:33:17.047 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Writing Parquet to s3a://dataengtrain8790/pipelineb/txn_summary
+2025-12-09 11:33:17.179 [sbt-bg-threads-1] WARN  o.a.h.metrics2.impl.MetricsConfig - Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+2025-12-09 11:33:30.930 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.930 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.932 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:33:30.943 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.943 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.943 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.944 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.944 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.944 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.944 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:30.944 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:33:31.776 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] WARN  o.a.parquet.hadoop.MemoryManager - Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory
+Scaling row group sizes to 95.00% for 8 writers
+2025-12-09 11:34:13.052 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Parquet write completed successfully
+2025-12-09 11:34:13.054 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B COMPLETED SUCCESSFULLY ✅ =====
+2025-12-09 11:34:13.079 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Stopped Spark@40c03fe{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 11:34:13.201 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Spark session stopped
+2025-12-09 11:34:13.456 [Thread-2] ERROR o.apache.hadoop.conf.Configuration - error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /Users/racit/Documents/sparkProject/pipeline-b-customer-profile/target/bg-jobs/sbt_d3ff3ad4/target/53fdf465/2328f86a/hadoop-common-3.3.1.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+	at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+	at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2986)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3082)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3040)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3013)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2893)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2875)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1225)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1842)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1819)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+	at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)
+2025-12-09 11:41:58.515 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 11:41:58.517 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 11:42:03.956 [sbt-bg-threads-1] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-12-09 11:42:04.236 [sbt-bg-threads-1] INFO  org.sparkproject.jetty.util.log - Logging initialized @18500ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-12-09 11:42:04.278 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - jetty-9.4.52.v20230823; built: 2023-08-23T19:29:37.669Z; git: abdcda73818a1a2c705da276edb0bf6581e7997e; jvm 11.0.29+0
+2025-12-09 11:42:04.292 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - Started @18556ms
+2025-12-09 11:42:04.305 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Started ServerConnector@6ee8a205{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 11:42:04.316 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7fadde99{/,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.461 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@7fadde99{/,null,STOPPED,@Spark}
+2025-12-09 11:42:04.462 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5ae0119c{/jobs,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.462 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@262f24e0{/jobs/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.463 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6355039a{/jobs/job,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.463 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@d1b1135{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.463 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6bf012d7{/stages,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.464 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@363789c0{/stages/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.464 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@e5d7f5{/stages/stage,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.465 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@158ef688{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.465 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6f831239{/stages/pool,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.465 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4bd1d511{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.466 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@44c7dea6{/storage,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.466 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@62f1b329{/storage/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.466 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3b3950b8{/storage/rdd,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.467 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1fa4e8e6{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.467 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@23f37e47{/environment,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.467 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@704937c0{/environment/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.468 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@682f036a{/executors,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.468 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@9840098{/executors/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.469 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7ba7980e{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.469 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3491db95{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.469 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7d48172{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.470 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@64811702{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.474 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@275dd3a9{/static,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.474 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5ca341df{/,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.475 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@66d77efd{/api,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.476 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@30ce0c10{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.476 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@79dac5ff{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.478 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@67039156{/metrics/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.521 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Spark Session created successfully
+2025-12-09 11:42:04.521 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 1: Extracting transactions from MySQL
+2025-12-09 11:42:04.573 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7c826a09{/SQL,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.574 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@15e32eb7{/SQL/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.574 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5a2181c6{/SQL/execution,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.574 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@74a5ad8b{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-12-09 11:42:04.579 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@689ed450{/static/sql,null,AVAILABLE,@Spark}
+2025-12-09 11:42:12.372 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Reading transactions from MySQL with query: (
+SELECT t.customer_id,
+       t.product_id,
+       t.qty,
+       t.amount,
+       t.txn_timestamp,
+       p.category
+FROM transactions t
+JOIN products p ON t.product_id = p.product_id
+WHERE DATE(t.txn_timestamp) IN ('2024-12-31','2024-12-30','2024-12-29','2024-12-28','2024-12-27','2024-12-26','2024-12-25','2024-12-24','2024-12-23','2024-12-22')
+) tx
+
+2025-12-09 11:42:21.381 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Extracted rows: 1058
+2025-12-09 11:42:27.293 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Extracted rows: 1058
+2025-12-09 11:42:27.293 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 2: Transforming transactions to daily summary
+2025-12-09 11:42:27.294 [sbt-bg-threads-1] INFO  transformer.TransactionSummarizer - Applying transformations & aggregations
+2025-12-09 11:42:33.498 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Aggregated rows: 1046
+2025-12-09 11:42:33.498 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 3: Writing daily summary to Parquet
+2025-12-09 11:42:33.499 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Writing Parquet to s3a://dataengtrain8790/pipelineb/txn_summary
+2025-12-09 11:42:33.565 [sbt-bg-threads-1] WARN  o.a.h.metrics2.impl.MetricsConfig - Cannot locate configuration: tried hadoop-metrics2-s3a-file-system.properties,hadoop-metrics2.properties
+2025-12-09 11:42:47.503 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.503 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.506 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:47.519 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:47.519 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:48.267 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] WARN  o.a.parquet.hadoop.MemoryManager - Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory
+Scaling row group sizes to 95.00% for 8 writers
+2025-12-09 11:42:49.661 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.662 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.663 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.687 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.688 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.688 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.689 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.689 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.690 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.694 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.695 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.696 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.709 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.709 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.710 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.821 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.821 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.823 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.823 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.823 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.825 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:49.901 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.901 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:49.903 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:50.320 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] WARN  o.a.parquet.hadoop.MemoryManager - Total allocation exceeds 95.00% (1,020,054,720 bytes) of heap memory
+Scaling row group sizes to 95.00% for 8 writers
+2025-12-09 11:42:50.891 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.892 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.896 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:50.915 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.916 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.917 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:50.923 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.924 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.924 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:50.971 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.971 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:50.971 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:51.000 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.000 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.001 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:51.033 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.034 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.034 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:51.444 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.445 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.446 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:51.461 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.461 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:51.462 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.092 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.093 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.094 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.136 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.136 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.137 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.194 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.195 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.195 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.250 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.251 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.252 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.316 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.316 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.317 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.393 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.393 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.394 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:52.813 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.815 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:52.816 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.091 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.091 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.092 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.115 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.115 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.115 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.407 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.408 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.408 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.620 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.620 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.621 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.693 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.693 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.694 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:53.773 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.774 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:53.775 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.036 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.037 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.038 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.101 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.102 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.102 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.166 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.167 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.167 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.328 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.328 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.329 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.627 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.628 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.628 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:54.920 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.921 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:54.922 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.100 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.101 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.101 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.220 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.221 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.222 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.265 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.266 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.266 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.409 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.410 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.410 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.504 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.504 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.505 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.582 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.588 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.588 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:55.915 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.915 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:55.916 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.418 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.418 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.419 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.447 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.447 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.447 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.527 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.527 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.528 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.628 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.629 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.629 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.649 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.649 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.650 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.781 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.782 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.782 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:56.971 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.971 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:56.972 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:57.340 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.340 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.341 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:57.719 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.719 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.720 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:57.742 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.742 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.742 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:57.755 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.756 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.756 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:57.925 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.926 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:57.928 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.051 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.052 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.052 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.071 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.071 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.071 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.276 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.276 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.276 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.605 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.605 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.606 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.719 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.719 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.720 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:58.980 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.983 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:58.984 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.125 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.125 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.126 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.151 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.152 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.152 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.359 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.361 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.362 [Executor task launch worker for task 1.0 in stage 22.0 (TID 72)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.580 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.580 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.581 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.593 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.594 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.594 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.918 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.919 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.919 [Executor task launch worker for task 0.0 in stage 22.0 (TID 71)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:42:59.934 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.934 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:42:59.935 [Executor task launch worker for task 4.0 in stage 22.0 (TID 75)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:43:00.202 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.202 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.203 [Executor task launch worker for task 3.0 in stage 22.0 (TID 74)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:43:00.445 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.446 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.446 [Executor task launch worker for task 7.0 in stage 22.0 (TID 78)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:43:00.677 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.677 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.677 [Executor task launch worker for task 6.0 in stage 22.0 (TID 77)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:43:00.801 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.801 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.801 [Executor task launch worker for task 5.0 in stage 22.0 (TID 76)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 11:43:00.928 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.928 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+2025-12-09 11:43:00.929 [Executor task launch worker for task 2.0 in stage 22.0 (TID 73)] INFO  o.a.p.hadoop.ParquetOutputFormat - ParquetRecordWriter [block size: 134217728b, row group padding size: 8388608b, validating: false]
+2025-12-09 12:00:50.654 [sbt-bg-threads-1] INFO  loader.ParquetLoader - Parquet write completed successfully
+2025-12-09 12:00:50.656 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B COMPLETED SUCCESSFULLY ✅ =====
+2025-12-09 12:00:50.674 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Stopped Spark@6ee8a205{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 12:00:51.054 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Spark session stopped
+2025-12-09 12:00:51.460 [Thread-2] ERROR o.apache.hadoop.conf.Configuration - error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /Users/racit/Documents/sparkProject/pipeline-b-customer-profile/target/bg-jobs/sbt_1837a658/target/53fdf465/2328f86a/hadoop-common-3.3.1.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+	at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+	at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2986)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3082)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3040)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3013)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2893)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2875)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1225)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1842)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1819)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+	at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)
+2025-12-09 12:08:25.294 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - ===== PIPELINE B : DAILY TRANSACTION SUMMARY STARTED =====
+2025-12-09 12:08:25.295 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Creating Spark Session for Pipeline B
+2025-12-09 12:08:30.899 [sbt-bg-threads-1] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-12-09 12:08:31.497 [sbt-bg-threads-1] INFO  org.sparkproject.jetty.util.log - Logging initialized @19334ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-12-09 12:08:31.582 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - jetty-9.4.52.v20230823; built: 2023-08-23T19:29:37.669Z; git: abdcda73818a1a2c705da276edb0bf6581e7997e; jvm 11.0.29+0
+2025-12-09 12:08:31.609 [sbt-bg-threads-1] INFO  o.sparkproject.jetty.server.Server - Started @19448ms
+2025-12-09 12:08:31.632 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Started ServerConnector@4a2ac142{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 12:08:31.649 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@761a50ce{/,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.863 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Stopped o.s.j.s.ServletContextHandler@761a50ce{/,null,STOPPED,@Spark}
+2025-12-09 12:08:31.864 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@34c44eb3{/jobs,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.864 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4fc72687{/jobs/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.865 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@72d94b8a{/jobs/job,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.866 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5f36a050{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.867 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6822c0e{/stages,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.868 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6863789c{/stages/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.868 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1c33d7f8{/stages/stage,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.869 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4e985047{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.870 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@39f053b1{/stages/pool,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.870 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5f5f6b18{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.871 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2943843d{/storage,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.872 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@16a89bda{/storage/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.873 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@18510f73{/storage/rdd,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.873 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@211cccc6{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.874 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2c19c483{/environment,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.874 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5fd1eaf8{/environment/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.875 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1afdbd5c{/executors,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.876 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@31421bbb{/executors/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.878 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2cf28d0c{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.879 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@49c6e45d{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.880 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3c58cfc0{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.880 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6f3e8661{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.885 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@440c0225{/static,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.886 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@9ad9a99{/,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.889 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@155530d3{/api,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.890 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1ba5dc96{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.890 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2b702d59{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.894 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2f8d47c0{/metrics/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:31.952 [sbt-bg-threads-1] INFO  util.SparkSessionFactory$ - Spark Session created successfully
+2025-12-09 12:08:31.952 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Step 1: Extracting previous day's transactions from MySQL
+2025-12-09 12:08:31.952 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Reading transactions from MySQL with query: (
+SELECT t.customer_id,
+       t.product_id,
+       t.qty,
+       t.amount,
+       t.txn_timestamp,
+       p.category
+FROM transactions t
+JOIN products p ON t.product_id = p.product_id
+WHERE DATE(t.txn_timestamp) = '2025-12-08'
+) tx
+
+2025-12-09 12:08:32.026 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@46b7d479{/SQL,null,AVAILABLE,@Spark}
+2025-12-09 12:08:32.027 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4831c77f{/SQL/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:32.028 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@2493ec53{/SQL/execution,null,AVAILABLE,@Spark}
+2025-12-09 12:08:32.029 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@3bb32ecd{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-12-09 12:08:32.034 [sbt-bg-threads-1] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@57934329{/static/sql,null,AVAILABLE,@Spark}
+2025-12-09 12:08:43.278 [sbt-bg-threads-1] INFO  extractor.MySQLExtractor - Extracted rows: 0
+2025-12-09 12:08:49.240 [sbt-bg-threads-1] INFO  TransactionSummaryJob$ - Extracted rows: 0
+2025-12-09 12:08:58.248 [sbt-bg-threads-1] WARN  TransactionSummaryJob$ - No transactions found for previous day. Exiting pipeline.
+2025-12-09 12:08:58.254 [sbt-bg-threads-1] INFO  o.s.jetty.server.AbstractConnector - Stopped Spark@4a2ac142{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-12-09 12:08:58.560 [Thread-2] ERROR o.apache.hadoop.conf.Configuration - error parsing conf core-default.xml
+java.nio.file.NoSuchFileException: /Users/racit/Documents/sparkProject/pipeline-b-customer-profile/target/bg-jobs/sbt_4c864143/target/53fdf465/2328f86a/hadoop-common-3.3.1.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+	at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+	at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+	at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+	at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+	at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+	at java.base/sun.net.www.protocol.jar.JarURLConnection.getInputStream(JarURLConnection.java:155)
+	at org.apache.hadoop.conf.Configuration.parse(Configuration.java:2986)
+	at org.apache.hadoop.conf.Configuration.getStreamReader(Configuration.java:3082)
+	at org.apache.hadoop.conf.Configuration.loadResource(Configuration.java:3040)
+	at org.apache.hadoop.conf.Configuration.loadResources(Configuration.java:3013)
+	at org.apache.hadoop.conf.Configuration.loadProps(Configuration.java:2893)
+	at org.apache.hadoop.conf.Configuration.getProps(Configuration.java:2875)
+	at org.apache.hadoop.conf.Configuration.get(Configuration.java:1225)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1842)
+	at org.apache.hadoop.conf.Configuration.getTimeDuration(Configuration.java:1819)
+	at org.apache.hadoop.util.ShutdownHookManager.getShutdownTimeout(ShutdownHookManager.java:183)
+	at org.apache.hadoop.util.ShutdownHookManager.shutdownExecutor(ShutdownHookManager.java:145)
+	at org.apache.hadoop.util.ShutdownHookManager.access$300(ShutdownHookManager.java:65)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:102)

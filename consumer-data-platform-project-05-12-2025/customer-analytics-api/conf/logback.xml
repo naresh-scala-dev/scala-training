@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Logback Configuration for Customer Analytics API
+  Location: conf/logback.xml
+
+  This configuration:
+  - Logs to both console and file
+  - Suppresses all warnings and verbose library output
+  - Shows only ERROR level and above in console
+  - Application logs go to logs/application.log
+-->
+
+<configuration>
+
+    <!-- Console Appender - Clean output, errors only -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %highlight(%-5level) %cyan(%logger{36}) - %msg%n</pattern>
+        </encoder>
+        <!-- Only show ERROR and above in console -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <!-- File Appender - Detailed logs for debugging -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${application.home:-.}/logs/application.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Daily rollover -->
+            <fileNamePattern>${application.home:-.}/logs/application.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Keep 30 days of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- Async Appenders for better performance -->
+    <appender name="ASYNC_STDOUT" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="STDOUT"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE"/>
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <!-- ============================================ -->
+    <!-- Application Loggers (INFO level for file)   -->
+    <!-- ============================================ -->
+    <logger name="application" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="controllers" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="services" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="repository" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="security" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="filters" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <logger name="cache" level="INFO" additivity="false">
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ASYNC_STDOUT"/>
+    </logger>
+
+    <!-- ============================================ -->
+    <!-- Play Framework (WARN level)                 -->
+    <!-- ============================================ -->
+    <logger name="play" level="WARN"/>
+    <logger name="org.apache.pekko" level="WARN"/>
+
+    <!-- ============================================ -->
+    <!-- Suppress Verbose Library Warnings           -->
+    <!-- ============================================ -->
+
+    <!-- AWS SDK -->
+    <logger name="com.amazonaws" level="ERROR"/>
+    <logger name="software.amazon.awssdk" level="ERROR"/>
+
+    <!-- Hadoop & Parquet -->
+    <logger name="org.apache.hadoop" level="ERROR"/>
+    <logger name="org.apache.parquet" level="ERROR"/>
+    <logger name="org.apache.avro" level="ERROR"/>
+
+    <!-- Cassandra Driver -->
+    <logger name="com.datastax.driver" level="ERROR"/>
+    <logger name="com.datastax.oss" level="ERROR"/>
+
+    <!-- Netty -->
+    <logger name="io.netty" level="ERROR"/>
+
+    <!-- Scala Deprecation Warnings -->
+    <logger name="scala.deprecation" level="ERROR"/>
+
+    <!-- HTTP Client -->
+    <logger name="org.apache.http" level="ERROR"/>
+
+    <!-- Jackson -->
+    <logger name="com.fasterxml.jackson" level="ERROR"/>
+
+    <!-- ============================================ -->
+    <!-- Root Logger - ERROR level for console       -->
+    <!-- ============================================ -->
+    <root level="ERROR">
+        <appender-ref ref="ASYNC_STDOUT"/>
+        <appender-ref ref="ASYNC_FILE"/>
+    </root>
+
+</configuration>

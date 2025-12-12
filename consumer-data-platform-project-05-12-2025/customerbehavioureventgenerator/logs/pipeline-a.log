@@ -1,0 +1,438 @@
+2025-12-12 02:35:33.241 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╔════════════════════════════════════════════════════════════╗
+2025-12-12 02:35:33.245 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║   Akka Behavioural Event Generator for Kafka              ║
+2025-12-12 02:35:33.245 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╚════════════════════════════════════════════════════════════╝
+2025-12-12 02:35:33.607 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 1: Loading configuration
+2025-12-12 02:35:33.607 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Events/sec: 10
+2025-12-12 02:35:33.608 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Kafka topic: customer_events
+2025-12-12 02:35:33.608 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Kafka brokers: localhost:9092,localhost:9094,localhost:9096
+2025-12-12 02:35:33.608 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 2: Loading reference data from MySQL
+2025-12-12 02:35:33.611 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loading customer_ids from MySQL
+2025-12-12 02:35:44.656 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loaded 5000 customer IDs
+2025-12-12 02:35:44.658 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loading product_ids from MySQL
+2025-12-12 02:35:47.996 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loaded 500 product IDs
+2025-12-12 02:35:47.999 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 3: Initializing Kafka producer
+2025-12-12 02:35:48.037 [sbt-bg-threads-1] INFO  o.a.k.c.producer.ProducerConfig - Idempotence will be disabled because acks is set to 1, not set to 'all'.
+2025-12-12 02:35:48.038 [sbt-bg-threads-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 32768
+	bootstrap.servers = [localhost:9092, localhost:9094, localhost:9096]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-12-12 02:35:48.066 [sbt-bg-threads-1] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-12-12 02:35:48.114 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-12-12 02:35:48.115 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-12-12 02:35:48.116 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1765487148114
+2025-12-12 02:35:48.117 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 4: Parsing Avro schema
+2025-12-12 02:35:48.210 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 5: Creating actor system
+2025-12-12 02:35:48.211 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 6: Starting event scheduler
+2025-12-12 02:35:48.211 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - === EventScheduler Started ===
+2025-12-12 02:35:48.212 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - Event rate: 10 events/second
+2025-12-12 02:35:48.213 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - Interval: 100ms
+2025-12-12 02:35:48.214 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - === BehaviouralEventGeneratorActor Started ===
+2025-12-12 02:35:48.214 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╔════════════════════════════════════════════════════════════╗
+2025-12-12 02:35:48.215 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Customers available: 5000
+2025-12-12 02:35:48.215 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 02:35:48.215 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Products available: 500
+2025-12-12 02:35:48.216 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║  ✓ Event Generator is RUNNING                             ║
+2025-12-12 02:35:48.216 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Generating 10 events/second             ║
+2025-12-12 02:35:48.216 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Kafka topic: customer_events                 ║
+2025-12-12 02:35:48.216 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Customers: 5000 | Products: 500                    ║
+2025-12-12 02:35:48.216 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -3 disconnected.
+2025-12-12 02:35:48.217 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 02:35:48.217 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║  Press Ctrl+C to stop                                     ║
+2025-12-12 02:35:48.217 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 02:35:48.218 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╚════════════════════════════════════════════════════════════╝
+2025-12-12 02:35:48.218 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -3 (localhost/127.0.0.1:9096) could not be established. Node may not be available.
+2025-12-12 02:35:48.218 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Event types: LIKE, WISHLIST, CART_ADD
+2025-12-12 02:35:48.218 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9096 (id: -3 rack: null) disconnected
+2025-12-12 02:35:48.306 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: utc3eCJxTsah_zGClk2_uQ
+2025-12-12 02:35:59.136 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 100
+2025-12-12 02:36:09.125 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 200
+2025-12-12 02:36:19.135 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 300
+2025-12-12 02:36:29.126 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 400
+2025-12-12 02:36:39.123 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 500
+2025-12-12 02:36:49.135 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 600
+2025-12-12 02:36:59.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 700
+2025-12-12 02:37:09.124 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 800
+2025-12-12 02:37:19.124 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 900
+2025-12-12 02:37:29.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1000
+2025-12-12 02:37:39.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1100
+2025-12-12 02:37:49.133 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1200
+2025-12-12 02:37:59.126 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1300
+2025-12-12 02:38:09.133 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1400
+2025-12-12 02:38:19.134 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1500
+2025-12-12 02:38:29.133 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1600
+2025-12-12 02:38:39.135 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1700
+2025-12-12 02:38:49.133 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1800
+2025-12-12 02:38:59.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1900
+2025-12-12 02:39:09.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2000
+2025-12-12 02:39:19.123 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2100
+2025-12-12 02:39:29.134 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2200
+2025-12-12 02:39:39.122 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2300
+2025-12-12 02:39:49.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2400
+2025-12-12 02:39:59.134 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2500
+2025-12-12 02:40:09.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2600
+2025-12-12 02:40:19.124 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2700
+2025-12-12 02:40:29.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2800
+2025-12-12 02:40:39.134 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2900
+2025-12-12 02:40:49.122 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3000
+2025-12-12 02:40:59.133 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3100
+2025-12-12 02:41:09.123 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3200
+2025-12-12 02:41:19.133 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3300
+2025-12-12 02:41:29.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3400
+2025-12-12 02:41:39.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3500
+2025-12-12 02:41:49.121 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3600
+2025-12-12 02:41:59.122 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3700
+2025-12-12 02:42:09.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3800
+2025-12-12 02:42:19.121 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3900
+2025-12-12 02:42:29.123 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4000
+2025-12-12 02:42:39.133 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4100
+2025-12-12 02:42:41.534 [sbt-bg-threads-1] ERROR AkkaEventProducerApp$ - FATAL ERROR: null
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1040)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1345)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:242)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:263)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:220)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:57)
+	at scala.concurrent.Await$.result(package.scala:146)
+	at AkkaEventProducerApp$.main(AkkaEventProducerApp.scala:73)
+	at AkkaEventProducerApp.main(AkkaEventProducerApp.scala)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sbt.Run.invokeMain(Run.scala:139)
+	at sbt.Run.execute$1(Run.scala:85)
+	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:112)
+	at sbt.Run$.executeSuccess(Run.scala:227)
+	at sbt.Run.runWithLoader(Run.scala:112)
+	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:2094)
+	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:2033)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:378)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2025-12-12 03:00:05.547 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╔════════════════════════════════════════════════════════════╗
+2025-12-12 03:00:05.548 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║   Akka Behavioural Event Generator for Kafka              ║
+2025-12-12 03:00:05.549 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╚════════════════════════════════════════════════════════════╝
+2025-12-12 03:00:05.891 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 1: Loading configuration
+2025-12-12 03:00:05.891 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Events/sec: 10
+2025-12-12 03:00:05.892 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Kafka topic: customer_events
+2025-12-12 03:00:05.892 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ -   Kafka brokers: localhost:9092,localhost:9094,localhost:9096
+2025-12-12 03:00:05.892 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 2: Loading reference data from MySQL
+2025-12-12 03:00:05.895 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loading customer_ids from MySQL
+2025-12-12 03:00:10.093 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loaded 5000 customer IDs
+2025-12-12 03:00:10.095 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loading product_ids from MySQL
+2025-12-12 03:00:14.013 [sbt-bg-threads-1] INFO  repository.ReferenceDataRepository - Loaded 500 product IDs
+2025-12-12 03:00:14.017 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 3: Initializing Kafka producer
+2025-12-12 03:00:14.044 [sbt-bg-threads-1] INFO  o.a.k.c.producer.ProducerConfig - Idempotence will be disabled because acks is set to 1, not set to 'all'.
+2025-12-12 03:00:14.045 [sbt-bg-threads-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 32768
+	bootstrap.servers = [localhost:9092, localhost:9094, localhost:9096]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-12-12 03:00:14.069 [sbt-bg-threads-1] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-12-12 03:00:14.111 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-12-12 03:00:14.111 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-12-12 03:00:14.112 [sbt-bg-threads-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1765488614111
+2025-12-12 03:00:14.114 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 4: Parsing Avro schema
+2025-12-12 03:00:14.193 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 5: Creating actor system
+2025-12-12 03:00:14.194 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - Phase 6: Starting event scheduler
+2025-12-12 03:00:14.194 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - === EventScheduler Started ===
+2025-12-12 03:00:14.195 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - Event rate: 10 events/second
+2025-12-12 03:00:14.195 [sbt-bg-threads-1] INFO  scheduler.EventScheduler - Interval: 100ms
+2025-12-12 03:00:14.195 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╔════════════════════════════════════════════════════════════╗
+2025-12-12 03:00:14.195 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - === BehaviouralEventGeneratorActor Started ===
+2025-12-12 03:00:14.196 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Customers available: 5000
+2025-12-12 03:00:14.196 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Products available: 500
+2025-12-12 03:00:14.196 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║  ✓ Event Generator is RUNNING                             ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Generating 10 events/second             ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Kafka topic: customer_events                 ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║    - Customers: 5000 | Products: 500                    ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║  Press Ctrl+C to stop                                     ║
+2025-12-12 03:00:14.197 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ║                                                            ║
+2025-12-12 03:00:14.198 [sbt-bg-threads-1] INFO  AkkaEventProducerApp$ - ╚════════════════════════════════════════════════════════════╝
+2025-12-12 03:00:14.198 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Event types: LIKE, WISHLIST, CART_ADD
+2025-12-12 03:00:14.245 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -3 disconnected.
+2025-12-12 03:00:14.246 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Connection to node -3 (localhost/127.0.0.1:9096) could not be established. Node may not be available.
+2025-12-12 03:00:14.246 [kafka-producer-network-thread | producer-1] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Bootstrap broker localhost:9096 (id: -3 rack: null) disconnected
+2025-12-12 03:00:14.248 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: utc3eCJxTsah_zGClk2_uQ
+2025-12-12 03:00:25.116 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 100
+2025-12-12 03:00:35.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 200
+2025-12-12 03:00:45.115 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 300
+2025-12-12 03:00:55.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 400
+2025-12-12 03:01:05.114 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 500
+2025-12-12 03:01:15.115 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 600
+2025-12-12 03:01:25.113 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 700
+2025-12-12 03:01:35.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 800
+2025-12-12 03:01:45.114 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 900
+2025-12-12 03:01:55.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1000
+2025-12-12 03:02:05.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1100
+2025-12-12 03:02:15.115 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1200
+2025-12-12 03:02:25.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1300
+2025-12-12 03:02:35.114 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1400
+2025-12-12 03:02:45.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1500
+2025-12-12 03:02:55.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1600
+2025-12-12 03:03:05.113 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1700
+2025-12-12 03:03:15.111 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1800
+2025-12-12 03:03:25.113 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 1900
+2025-12-12 03:03:35.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2000
+2025-12-12 03:03:45.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2100
+2025-12-12 03:03:55.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2200
+2025-12-12 03:04:05.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2300
+2025-12-12 03:04:15.113 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2400
+2025-12-12 03:04:25.112 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2500
+2025-12-12 03:04:35.114 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2600
+2025-12-12 03:04:45.113 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2700
+2025-12-12 03:04:55.112 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2800
+2025-12-12 03:05:05.129 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 2900
+2025-12-12 03:05:15.138 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3000
+2025-12-12 03:05:25.144 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3100
+2025-12-12 03:05:35.147 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3200
+2025-12-12 03:05:45.148 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3300
+2025-12-12 03:05:55.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3400
+2025-12-12 03:06:05.148 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3500
+2025-12-12 03:06:15.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3600
+2025-12-12 03:06:25.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3700
+2025-12-12 03:06:35.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3800
+2025-12-12 03:06:45.149 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 3900
+2025-12-12 03:06:55.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4000
+2025-12-12 03:07:05.149 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4100
+2025-12-12 03:07:15.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4200
+2025-12-12 03:07:25.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4300
+2025-12-12 03:07:35.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4400
+2025-12-12 03:07:45.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4500
+2025-12-12 03:07:55.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4600
+2025-12-12 03:08:05.149 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4700
+2025-12-12 03:08:15.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4800
+2025-12-12 03:08:25.149 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 4900
+2025-12-12 03:08:35.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5000
+2025-12-12 03:08:45.149 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5100
+2025-12-12 03:08:55.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5200
+2025-12-12 03:09:05.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5300
+2025-12-12 03:09:14.355 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -2 disconnected.
+2025-12-12 03:09:15.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5400
+2025-12-12 03:09:25.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5500
+2025-12-12 03:09:35.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5600
+2025-12-12 03:09:45.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5700
+2025-12-12 03:09:55.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5800
+2025-12-12 03:10:05.152 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 5900
+2025-12-12 03:10:15.149 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6000
+2025-12-12 03:10:25.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6100
+2025-12-12 03:10:35.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6200
+2025-12-12 03:10:45.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6300
+2025-12-12 03:10:55.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6400
+2025-12-12 03:11:05.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6500
+2025-12-12 03:11:15.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6600
+2025-12-12 03:11:25.150 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6700
+2025-12-12 03:11:35.151 [event-generator-system-akka.actor.default-dispatcher-4] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6800
+2025-12-12 03:11:45.151 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 6900
+2025-12-12 03:11:55.150 [event-generator-system-akka.actor.default-dispatcher-5] INFO  a.BehaviouralEventGeneratorActor - Total events generated: 7000
+2025-12-12 03:12:02.789 [sbt-bg-threads-1] ERROR AkkaEventProducerApp$ - FATAL ERROR: null
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1040)
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1345)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryAwait(Promise.scala:242)
+	at scala.concurrent.impl.Promise$DefaultPromise.ready(Promise.scala:258)
+	at scala.concurrent.impl.Promise$DefaultPromise.result(Promise.scala:263)
+	at scala.concurrent.Await$.$anonfun$result$1(package.scala:220)
+	at scala.concurrent.BlockContext$DefaultBlockContext$.blockOn(BlockContext.scala:57)
+	at scala.concurrent.Await$.result(package.scala:146)
+	at AkkaEventProducerApp$.main(AkkaEventProducerApp.scala:73)
+	at AkkaEventProducerApp.main(AkkaEventProducerApp.scala)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sbt.Run.invokeMain(Run.scala:139)
+	at sbt.Run.execute$1(Run.scala:85)
+	at sbt.Run.$anonfun$runWithLoader$5(Run.scala:112)
+	at sbt.Run$.executeSuccess(Run.scala:227)
+	at sbt.Run.runWithLoader(Run.scala:112)
+	at sbt.Defaults$.$anonfun$bgRunTask$6(Defaults.scala:2094)
+	at sbt.Defaults$.$anonfun$termWrapper$2(Defaults.scala:2033)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.util.Try$.apply(Try.scala:213)
+	at sbt.internal.BackgroundThreadPool$BackgroundRunnable.run(DefaultBackgroundJobService.scala:378)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
